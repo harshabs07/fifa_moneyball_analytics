@@ -1,46 +1,69 @@
 # ⚽ FIFA "Moneyball" Scouting Dashboard
 
-An end-to-end data engineering and analytics project to identify undervalued U-23 football talent.
+An end-to-end data engineering and analytics project to identify undervalued U-23 football talent using a data-driven scouting approach.
 
+---
 
+# 🎯 Problem Statement
 
-## 🎯 Project Objective
+A mid-table football club has recently sold its star central midfielder to generate transfer funds. The transfer created a major gap in the squad, and the club must quickly find a replacement before the upcoming season.
 
-The goal was to solve a real-world scouting problem: Find a high-potential CM/CDM replacement under the age of 23 with a budget cap of **€15M**.
+However, the club faces two key constraints:
 
+- A limited transfer budget of **€15M**
+- A preference for **young players (U-23)** who can develop into future stars
 
+Traditional scouting methods rely heavily on manual observation and subjective judgement, which can sometimes overlook undervalued talent across global leagues.
 
-## 🛠️ Tech Stack
+To address this problem, this project applies a **data-driven scouting approach inspired by the Moneyball philosophy**, using FIFA player data to identify midfielders who provide the best **performance-to-value ratio**.
 
-- **Python:** Data cleaning and ETL (Extract, Transform, Load).
+The objective is to answer the key scouting question:
 
-- **MySQL:** Relational database for structured data storage.
+> **Which U-23 CM/CDM under €15M offers the best value and can replace the club's departing star player?**
 
-- **Power BI:** Interactive visualization and business intelligence.
+---
 
+# 🛠️ Tech Stack
 
+- **Python:** Data cleaning and ETL (Extract, Transform, Load)
+- **MySQL:** Relational database for structured data storage
+- **Power BI:** Interactive visualization and business intelligence
 
-## 📊 The Dashboard
+---
+
+# 📊 The Dashboard
 
 ![Main Dashboard](output.png)
 
+---
 
+# 💡 Key Technical Solutions
 
-## 💡 Key Technical Solutions
+### Handling Dirty Data
+Resolved duplicate player entries across multiple FIFA versions by implementing **average aggregation** for player ratings and market values.
 
-- **Handling Dirty Data:** Resolved duplicate player entries across game versions by implementing **Average Aggregation** for ratings and values.
+### Automated Data Pipeline
+Built a Python ETL script using **SQLAlchemy** to automatically transfer **19,000+ player records** from CSV files into a local MySQL database.
 
-- **Automated Pipeline:** Built a Python script using `SQLAlchemy` to move 19,000+ records from CSV to a local MySQL instance.
+### Advanced Visualization
+Designed an interactive **Value vs Performance scatter plot** in Power BI with dynamic slicers for:
 
-- **Advanced Visualization:** Created a "Value vs. Performance" scatter plot with dynamic slicers for real-time scouting.
+- Age
+- Position
+- Transfer value
+- Overall rating
 
+This enables real-time scouting analysis.
 
+---
 
-## 🏆 Final Recommendation
+# 🏆 Final Recommendation
 
-Based on the data, **A. Ramsey** was identified as the primary target, offering an elite **83 OVR** for only **€15M**, fitting perfectly within the club's financial constraints.
+Based on the data analysis, **A. Ramsey** emerged as the best replacement option.
 
+- **Overall Rating:** 83 OVR
+- **Age:** Under 23
+- **Market Value:** €15M
+- **Position:** CM
 
-
-
-
+He provides elite performance within the club's financial constraints, making him the ideal signing based on the data-driven scouting model.
