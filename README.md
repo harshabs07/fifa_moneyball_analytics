@@ -10,7 +10,7 @@ The goal was to solve a real-world scouting problem: Find a high-potential CM/CD
 - **Power BI:** Interactive visualization and business intelligence.
 
 ## 📊 The Dashboard
-![Main Dashboard](C:\Users\sbeve\OneDrive\Desktop\Football_Project)
+![Main Dashboard](images/output.png)
 
 ## 💡 Key Technical Solutions
 - **Handling Dirty Data:** Resolved duplicate player entries across game versions by implementing **Average Aggregation** for ratings and values.
